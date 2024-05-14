@@ -1,5 +1,6 @@
 ## Margin Collapsing
 #### 发生条件：
+- 块级元素
 - 相邻的兄弟节点中
 - 父级组件与子组件之间无内容，eg: there is no border, padding, inline part, block formattingcontext, or clearance
 - 空元素，margin top & margin bottom会发生collapse
