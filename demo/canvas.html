@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // 在画布上画一条线，从 (0, 0) 到 (100, 100)
+        ctx.moveTo(0, 0);    // 起点：左上角
+        ctx.lineTo(100, 100); // 向右下方移动
+        ctx.stroke();
+    </script>
+  </body>
+</html>

@@ -9,6 +9,7 @@ Containing Block实际上定义了元素的大小和位置的依据
 #### 不同情况下对应的Containing Block
 - root element(html)对应的Containing Block：viewport
 - position为static、relative、sticky时对应的Containing Block：祖先元素中，最近一级的块元素（block container）的Content Box；祖先元素中，最近一级创建了格式化上下文的容器（table container、flex container、grid container、block container）的content box
+- position为sticky时，初始化时的Containing Block与static和relative一致，这时候top、left等属性也是不生效的；当滚动使sticky属性生效时，top、left是相对于最近的一级可滚动的祖先元素的Content Box来计算
 - position为absolute时对应的Containing Block：祖先元素中，最近一级position属性为非static的元素的padding box
 - position为fixed时对应的Containing Block：viewport
 - Note: 当postion为fixed或者absolute时，containing block也受transform、fitler(?)、will-change(?)、contain(?)、container-type(?)、backdrop-filter(?)任意一种的影响
